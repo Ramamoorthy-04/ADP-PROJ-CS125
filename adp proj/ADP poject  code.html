@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> User Profile Card </title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+<link rel="stylesheet" href="cs.css"> 
+</head> 
+ 
+<body> 
+    <div class="card-container"> 
+        <div class="cart-top-navigation"> 
+            <li> 
+                <i class="fa-solid fa-arrow-left"></i> 
+            </li> 
+            <ul> 
+                <i id="heart" class="fa-regular fa-heart"></i> 
+                <i class="fa-solid fa-bars"></i> 
+            </ul> 
+        </div> 
+        <div class="user-image">
+            <img src="rama.jpg" alt=""> 
+        </div> 
+        <h2 class="user-name">Ramamoorthy AS</h2> 
+        <p class="about-user">Hello sir, I am Ramamoorthy AS. I am a computer science engineer who graduated from CIT with 8.8 CGPA. My ph.no is 6381038771.</p> 
+        <button id="hire-me" class="hire-me">Hire Me</button> 
+ 
+        <div class="social-container"> 
+            <div class="social-item"> 
+                <a href="https://www.instagram.com/ramamoorthy04" target="_blank">
+                    <li class="instagram"> 
+                        <i class="fa-brands fa-instagram"></i> 
+                    </li> 
+                </a>
+                <span class="followers">225</span> 
+                <span class="followers">Followers</span> 
+            </div> 
+            <div class="social-item"> 
+                <a href="https://www.youtube.com/channel/your_channel" target="_blank">
+                    <li class="youtube"> 
+                        <i class="fa-brands fa-youtube"></i> 
+                    </li> 
+                </a>
+                <span class="subscribers">100</span> 
+                <span class="subscribers">Subscribers</span> 
+            </div> 
+            <div class="social-item"> 
+                <a href="https://www.linkedin.com/in/your_profile" target="_blank">
+                    <li class="linkedin"> 
+                        <i class="fa-brands fa-linkedin"></i> 
+                    </li> 
+                </a>
+                <span class="followers">150</span> 
+                <span class="followers">Followers</span> 
+            </div> 
+        </div> 
+    </div> 
+<script>
+        const heart = document.getElementById('heart');
+        let isLiked = false;
+        
+        heart.addEventListener('click', () => {
+            if (isLiked) {
+                heart.classList.remove('red-heart');
+                heart.classList.add('fa-regular');
+                isLiked = false;
+            } else {
+                heart.classList.remove('fa-regular');
+                heart.classList.add('red-heart');
+                isLiked = true;
+            }
+        });
+const hireMeBtn = document.getElementById('hire-me');
+    
+    hireMeBtn.addEventListener('click', () => {
+        window.open('mailto:ramamoorthyas2004@gmail.com');
+    });
+    </script>
+</body> 
+<script src="jss.js"></script>
